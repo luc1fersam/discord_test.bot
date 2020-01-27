@@ -3,6 +3,8 @@ from discord import User, Member, ClientUser
 from discord.ext import commands
 from discord.ext.commands import Context
 
+from .token import TOKEN
+
 client = commands.Bot(command_prefix='.')
 
 
@@ -36,4 +38,4 @@ async def avatar_command(ctx: Context, user: Union[User, Member, ClientUser]):
     await ctx.send(avatar_url)
 
 
-client.run('NjcwNjgzMDQxNTc1OTkzMzY1.Xix8Zg.vakRr3Uy5SgMDtyFlICqmmi5v24')
+client.run(TOKEN)
