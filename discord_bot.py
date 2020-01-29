@@ -1,11 +1,11 @@
 from typing import Union
 from discord import User, Member, ClientUser
-from discord.ext import commands
 from discord.ext.commands import Context
+from bot import Bot
 
 from bot_token import BOT_TOKEN
 
-client = commands.Bot(command_prefix='.')
+client = Bot(command_prefix='.')
 
 
 @client.event
