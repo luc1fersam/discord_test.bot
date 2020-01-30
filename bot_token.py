@@ -1,3 +1,3 @@
-BOT_TOKEN = 'NjcwNjgzMDQxNTc1OTkzMzY1.XjHJFg.HRBWs9ZA3n_mJF1KYQ50ijlOhm'
+BOT_TOKEN = 'NjcwNjgzMDQxNTc1OTkzMzY1.XjKt0w.yzKgoNm8qZdKNtuYwivkdLwu1Hc'
 
 __all__ = ('BOT_TOKEN', )
