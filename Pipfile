@@ -6,8 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-discord = "*"
 uvloop = "*"
+discord-py = "*"
+aiodns = "*"
 
 [requires]
 python_version = "3.6"
