@@ -38,4 +38,6 @@ async def avatar_command(ctx: Context, user: Union[User, Member, ClientUser]):
     await ctx.send(avatar_url)
 
 
-client.run(BOT_TOKEN)
+client.run(
+
+)
