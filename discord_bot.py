@@ -5,7 +5,9 @@ from bot import Bot
 from bot_token import BOT_TOKEN
 from censor import censor
 
-client = Bot(command_prefix='.')
+client = Bot(
+    command_prefix='.'
+)
 
 
 @client.event
@@ -25,13 +27,23 @@ async def on_member_remove(member):
 
 @client.event
 async def on_message(msg):
+
+    content = list(map(lambda s: s.lower(), msg.content.split()))
+
     for el in censor:
-        if msg.content == el:
-            await msg.delete()
+        el = el.lower()
+        if el in content:
+            break
+
+    else:
+        return
+
+    await msg.delete()
+
 
 
 @client.command()
-async def ping(ctx):
+async def ping(ctx: Context):
     await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
 
 

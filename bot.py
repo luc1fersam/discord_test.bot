@@ -16,7 +16,6 @@ class Bot(commands.Bot):
         self.connector = aiohttp.TCPConnector(
             resolver=aiohttp.AsyncResolver(),
             family=socket.AF_INET,
-            verify_ssl=False
         )
 
         kwargs['loop'] = asyncio.get_event_loop()
