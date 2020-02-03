@@ -4,14 +4,11 @@ import logging
 import asyncio
 import aiohttp
 import socket
-import uvloop
 
 from discord.ext import commands
 
 log = logging.getLogger('bot')
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-log.info('UVLoop has been successfully settled')
 
 
 class Bot(commands.Bot):
